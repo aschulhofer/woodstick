@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss.SSS} [%-5level] [%t]  %logger{36} [%M] - %msg%n" />
+        </Console>
+        <File name="logfile" fileName="${project.name}-test.log">
+            <PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss.SSS} [%-5level] [%t]  %logger{36} [%M] - %msg%n" />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="logfile" />
+        </Root>    
+    </Loggers>
+</Configuration>
